@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import { Card, Button, Modal } from 'react-bootstrap';
+import { Card, Button, Modal, Table } from 'react-bootstrap';
 
 export interface IAlbum {
   id: number;
@@ -65,6 +65,7 @@ function App() {
   const [randomAlbums, setRandomAlbums] = useState<IAlbum[]>([]);
   const [showPopup, setShowPopup] = useState(false);
   const [selectedAlbumLink, setSelectedAlbumLink] = useState('');
+  const [showResults, setShowResults] = useState(false);
 
   useEffect(() => {
     setRandomAlbums(getRandomAlbums());
@@ -79,6 +80,10 @@ function App() {
   const openPopup = (link: string) => {
     setShowPopup(true);
     setSelectedAlbumLink(link);
+  };
+
+  const openResultsModal = () => {
+    setShowResults(true);
   };
 
   return (
@@ -99,16 +104,34 @@ function App() {
           </div>
         ))}
       </div>
-      <Modal show={showPopup} onHide={() => setShowPopup(false)}>
+      <div className="row">
+        <div className="col-md-12 text-center">
+          <Button onClick={openResultsModal}>Show Results</Button>
+        </div>
+      </div>
+      <Modal show={showResults} onHide={() => setShowResults(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Results</Modal.Title>
+        </Modal.Header>
         <Modal.Body>
-          <iframe
-            width="100%"
-            height="272px"
-            src={selectedAlbumLink}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+          <Table striped bordered>
+            <thead>
+              <tr>
+                <th>Album</th>
+                <th>Votes</th>
+                <th>WR, %</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ALBUMS.map((album) => (
+                <tr key={album.id}>
+                  <td>{`${album.title} - ${album.band}`}</td>
+                  <td>{album.votes}</td>
+                  <td>{((album.votes / album.picks) * 100 || 0).toFixed(1)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
         </Modal.Body>
       </Modal>
     </div>
