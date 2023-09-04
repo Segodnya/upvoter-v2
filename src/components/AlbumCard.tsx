@@ -18,7 +18,7 @@ export const AlbumCard: FC<AlbumCardProps> = ({
           <Card.Text>{album.band}</Card.Text>
           <Card.Text>
             {album.genre.map((g) => (
-              <Badge pill bg="dark">{`#${g}`}</Badge>
+              <Badge key={g} pill bg="dark">{`#${g}`}</Badge>
             ))}
           </Card.Text>
           <ButtonGroup size="sm">
