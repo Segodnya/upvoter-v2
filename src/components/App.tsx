@@ -84,47 +84,31 @@ function App() {
   return (
     <div className="App">
       <div className="row">
-        <div className="col-md-6">
-          {randomAlbums[0] && (
+        {randomAlbums.map((album, index) => (
+          <div className="col-md-6" key={album.id}>
             <Card>
-              <Card.Img variant="top" src={randomAlbums[0].cover} />
+              <Card.Img variant="top" src={album.cover} />
               <Card.Body>
-                <Card.Title>{randomAlbums[0].title}</Card.Title>
-                <Card.Text>{randomAlbums[0].band}</Card.Text>
-                <Card.Text>Genres: {randomAlbums[0].genre.join(', ')}</Card.Text>
-                <Button onClick={() => handleVote(0)}>Vote</Button>
-                <Button onClick={() => openPopup(randomAlbums[0].link)}>Open Popup</Button>
+                <Card.Title>{album.title}</Card.Title>
+                <Card.Text>{album.band}</Card.Text>
+                <Card.Text>Genres: {album.genre.join(', ')}</Card.Text>
+                <Button onClick={() => handleVote(index)}>Vote</Button>
+                <Button onClick={() => openPopup(album.link)}>Open Popup</Button>
               </Card.Body>
             </Card>
-          )}
-        </div>
-        <div className="col-md-6">
-          {randomAlbums[1] && (
-            <Card>
-              <Card.Img variant="top" src={randomAlbums[1].cover} />
-              <Card.Body>
-                <Card.Title>{randomAlbums[1].title}</Card.Title>
-                <Card.Text>{randomAlbums[1].band}</Card.Text>
-                <Card.Text>Genres: {randomAlbums[1].genre.join(', ')}</Card.Text>
-                <Button onClick={() => handleVote(1)}>Vote</Button>
-                <Button onClick={() => openPopup(randomAlbums[1].link)}>Open Popup</Button>
-              </Card.Body>
-            </Card>
-          )}
-        </div>
+          </div>
+        ))}
       </div>
       <Modal show={showPopup} onHide={() => setShowPopup(false)}>
         <Modal.Body>
           <iframe
             width="100%"
-            height="100%"
+            height="272px"
             src={selectedAlbumLink}
             title="YouTube video player"
-            frameBorder={0}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
-          ;
         </Modal.Body>
       </Modal>
     </div>
