@@ -1,17 +1,17 @@
-import './App.css';
-import { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
-import { IAlbum } from '../types';
-import { ALBUMS } from '../utils/constants';
-import { getRandomAlbums } from '../utils/utils';
-import { ModalVideo } from './ModalVideo';
-import { AlbumCard } from './AlbumCard';
-import { ModalResults } from './ModalResults';
+import { useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
+import { IAlbum } from "../types";
+import { ALBUMS } from "../utils/constants";
+import { getRandomAlbums } from "../utils/utils";
+import { ModalVideo } from "./ModalVideo";
+import { AlbumCard } from "./AlbumCard";
+import { ModalResults } from "./ModalResults";
+import "./App.css";
 
 function App() {
   const [randomAlbums, setRandomAlbums] = useState<IAlbum[]>([]);
   const [showPopup, setShowPopup] = useState(false);
-  const [selectedAlbumLink, setSelectedAlbumLink] = useState('');
+  const [selectedAlbumLink, setSelectedAlbumLink] = useState("");
   const [showResults, setShowResults] = useState(false);
 
   useEffect(() => {
@@ -35,10 +35,18 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Выбери альбом!</h1>
       <div className="row">
         {randomAlbums.map((album, index) => (
-          <AlbumCard album={album} key={album.id} index={index} handleVote={handleVote} openPopup={openPopup} />
+          <AlbumCard
+            album={album}
+            key={album.id}
+            index={index}
+            handleVote={handleVote}
+            openPopup={openPopup}
+          />
         ))}
+        h
       </div>
 
       <div className="row">
@@ -47,9 +55,17 @@ function App() {
         </div>
       </div>
 
-      <ModalVideo showPopup={showPopup} setShowPopup={setShowPopup} selectedAlbumLink={selectedAlbumLink} />
+      <ModalVideo
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+        selectedAlbumLink={selectedAlbumLink}
+      />
 
-      <ModalResults showResults={showResults} setShowResults={setShowResults} ALBUMS={ALBUMS} />
+      <ModalResults
+        showResults={showResults}
+        setShowResults={setShowResults}
+        ALBUMS={ALBUMS}
+      />
     </div>
   );
 }
