@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button, Spinner } from "react-bootstrap";
+import { Button, Col, Row, Spinner } from "react-bootstrap";
 import { IAlbum } from "../types";
 import { getRandomAlbums } from "../utils/utils";
 import { ModalVideo } from "./ModalVideo";
@@ -47,29 +47,31 @@ function App() {
     setShowResults(true);
   };
 
+  // TODO: Fix layout
   return (
     <div className="App">
       {fetching ? (
-        <Spinner />
+        <Spinner animation="border" />
       ) : (
         <>
-          <h1>Выбери альбом!</h1>
-          <div className="row">
+          <h1 className="text-center mb-4">Выбери альбом!</h1>
+          <Row>
             {randomAlbums.map((album, index) => (
-              <AlbumCard
-                album={album}
-                key={album.id}
-                index={index}
-                handleVote={handleVote}
-                openPopup={openPopup}
-              />
+              <Col xs={12} md={6} key={album.id}>
+                <AlbumCard
+                  album={album}
+                  index={index}
+                  handleVote={handleVote}
+                  openPopup={openPopup}
+                />
+              </Col>
             ))}
-          </div>
+          </Row>
 
-          <div className="row">
-            <div className="col-md-12 text-center">
-              <Button onClick={openResultsModal}>Show Results</Button>
-            </div>
+          <div className="text-center mt-4">
+            <Button variant="primary" onClick={openResultsModal}>
+              Show Results
+            </Button>
           </div>
         </>
       )}

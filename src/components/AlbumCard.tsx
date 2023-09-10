@@ -10,7 +10,7 @@ export const AlbumCard: FC<AlbumCardProps> = ({
   openPopup,
 }) => {
   return (
-    <div className="col-md-6">
+    <div className="col-md-12">
       <Card className="card">
         <Card.Img variant="top" src={album.cover} />
         <Card.ImgOverlay className="card__overlay">
