@@ -2,7 +2,7 @@ import { IAlbum } from "../types";
 
 export const ALBUMS: IAlbum[] = [
   {
-    id: 0,
+    id: "0",
     title: "Foregone",
     band: "In Flames",
     cover:
@@ -13,7 +13,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["metalcore", "melodeath", "metal"],
   },
   {
-    id: 1,
+    id: "1",
     title: "Dark Waters",
     band: "Delain",
     cover:
@@ -24,7 +24,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["gothic", "symphonic", "power"],
   },
   {
-    id: 2,
+    id: "2",
     title: "The Wonders Still Awaiting",
     band: "Xandria",
     cover:
@@ -35,7 +35,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["symphonic", "gothic", "metal"],
   },
   {
-    id: 3,
+    id: "3",
     title: "Operation Phoenix",
     band: "Crowne",
     cover:
@@ -46,7 +46,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["power", "heavy", "rock"],
   },
   {
-    id: 4,
+    id: "4",
     title: "Hope is a Cult",
     band: "Solence",
     cover:
@@ -57,7 +57,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["modern", "electronic", "metal"],
   },
   {
-    id: 5,
+    id: "5",
     title: "before i get to rest",
     band: "thermality",
     cover:
@@ -68,7 +68,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["melodeath", "power", "metal"],
   },
   {
-    id: 6,
+    id: "6",
     title: "ounas I",
     band: "suotana",
     cover:
@@ -79,7 +79,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["black", "melodeath", "metal"],
   },
   {
-    id: 7,
+    id: "7",
     title: "once upon a time",
     band: "excalion",
     cover:
@@ -90,7 +90,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["progressive", "power", "heavy"],
   },
   {
-    id: 8,
+    id: "8",
     title: "death below",
     band: "august burns red",
     cover:
@@ -101,7 +101,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["christian", "metalcore", "hardcore"],
   },
   {
-    id: 9,
+    id: "9",
     title: "gettin old",
     band: "luke combs",
     cover:
@@ -112,7 +112,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["country", "americana"],
   },
   {
-    id: 10,
+    id: "10",
     title: "downfall",
     band: "ad infinitum",
     cover:
@@ -123,7 +123,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["symphonic", "power", "progressive"],
   },
   {
-    id: 11,
+    id: "11",
     title: "not all who dream are asleep",
     band: "lyrre",
     cover:
@@ -134,7 +134,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["folk", "power", "symphonic"],
   },
   {
-    id: 12,
+    id: "12",
     title: "the seventh sun",
     band: "bury tomorrow",
     cover:
@@ -145,7 +145,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["metalcore", "hardcore", "metal"],
   },
   {
-    id: 13,
+    id: "13",
     title: "purify and refine",
     band: "born through fire",
     cover:
@@ -156,7 +156,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["metalcore", "hardcore", "metal"],
   },
   {
-    id: 14,
+    id: "14",
     title: "burn in the flood",
     band: "our hollow, our home",
     cover:
@@ -167,7 +167,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["metalcore", "progressive", "metal"],
   },
   {
-    id: 15,
+    id: "15",
     title: "beyond the black",
     band: "beyond the black",
     cover:
@@ -178,7 +178,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["symphonic", "power", "metal"],
   },
   {
-    id: 16,
+    id: "16",
     title: "72 Seasons",
     band: "Metallica",
     cover:
@@ -189,7 +189,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["thrash", "heavy", "metal"],
   },
   {
-    id: 17,
+    id: "17",
     title: "intellectual property",
     band: "waterparks",
     cover:
@@ -200,7 +200,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["pop", "punk", "alternative"],
   },
   {
-    id: 18,
+    id: "18",
     title: "The Death We Seek",
     band: "Currents",
     cover:
@@ -211,7 +211,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["metalcore", "deathcore", "djent"],
   },
   {
-    id: 19,
+    id: "19",
     title: "sinister",
     band: "i am your god",
     cover:
@@ -222,7 +222,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["metalcore", "melodeath", "metal"],
   },
   {
-    id: 20,
+    id: "20",
     title: "the balance",
     band: "awake at last",
     cover:
@@ -233,7 +233,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["post-hardcore", "alternative", "rock"],
   },
   {
-    id: 21,
+    id: "21",
     title: "not without my ghosts",
     band: "the amity affliction",
     cover:
@@ -244,7 +244,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["post-hardcore", "metalcore", "hardcore"],
   },
   {
-    id: 22,
+    id: "22",
     title: "kalmah",
     band: "kalmah",
     cover:
@@ -255,7 +255,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["melodeath", "death", "metal"],
   },
   {
-    id: 23,
+    id: "23",
     title: "the fifth dimension",
     band: "rise to fall",
     cover:
@@ -266,7 +266,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["melodeath", "metalcore", "modern"],
   },
   {
-    id: 24,
+    id: "24",
     title: "tales from the north",
     band: "bloodbound",
     cover:
@@ -277,7 +277,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["melodic", "power", "heavy"],
   },
   {
-    id: 25,
+    id: "25",
     title: "we shall remain",
     band: "eleine",
     cover:
@@ -288,7 +288,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["symphonic", "power", "metal"],
   },
   {
-    id: 26,
+    id: "26",
     title: "bleed out",
     band: "within temptation",
     cover:
@@ -299,7 +299,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["symphonic", "gothic", "metal"],
   },
   {
-    id: 27,
+    id: "27",
     title: "the moment you find your flame",
     band: "atreyu",
     cover:
@@ -310,7 +310,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["metalcore", "hardcore", "rock"],
   },
   {
-    id: 28,
+    id: "28",
     title: "the vertigo trigger",
     band: "cyhra",
     cover:
@@ -321,7 +321,7 @@ export const ALBUMS: IAlbum[] = [
     genre: ["power", "heavy", "melodic"],
   },
   {
-    id: 29,
+    id: "29",
     title: "descent",
     band: "orbit culture",
     cover:

@@ -1,7 +1,7 @@
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction } from "react";
 
 export interface IAlbum {
-  id: number;
+  id: string;
   title: string;
   band: string;
   cover: string;
