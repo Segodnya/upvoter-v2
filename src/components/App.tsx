@@ -28,8 +28,12 @@ function App() {
 
   const handleVote = async (index: number) => {
     setFetching(true);
-    await voteAlbum(albums[Number(randomAlbums[index].id)]);
-    await pickAlbum(albums[Number(randomAlbums[1 - index].id)]);
+
+    await voteAlbum(albums.filter((a) => a.id === randomAlbums[index].id)[0]);
+    await pickAlbum(
+      albums.filter((a) => a.id === randomAlbums[1 - index].id)[0]
+    );
+
     getAlbums()
       .then((albums) => {
         setAlbums(albums);
